@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>JavaScript Test</title>
+</head>
+
+<body>
+    <input id="name-input" type="text" placeholder="Enter your name" />
+    <button id="my-button">Click Me</button>
+
+    <script>
+        // Get button element from html DOM with id
+        var myButton = document.querySelector('#my-button');
+        // Get name input from html DOM with id
+        var nameInput = document.querySelector('#name-input');
+      
+        // Add event listener to the button assigned above
+        // Listens for a click event, with anonymous callback function
+        myButton.addEventListener('click', function () {
+        // Function checks if input is not empty from the name text input
+          if (nameInput.value !== '') {
+            // If not empty, alert user with a greeting
+            alert('Hello ' + nameInput.value);
+          }
+        });
+      </script>
+</body>
+
+</html>
