@@ -1,0 +1,12 @@
+body {
+    font-family: monospace;
+    background-color: turquoise;
+}
+
+#main-title {
+    text-align: center;
+}
+
+.content {
+    margin-bottom: 12px;
+}
