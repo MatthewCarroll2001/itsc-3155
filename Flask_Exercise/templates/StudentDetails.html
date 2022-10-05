@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css">
+    <title>Document</title>
+</head>
+<body>
+    
+    {% block content %}
+    <h1>Student Details</h1>
+    <table>
+        <tr>
+            <th>Name</th>
+            <th>Organization</th>
+        </tr>
+        {%for key,value in studentOrganizationDetails.items()%}
+        <tr>
+            <td>{{ key }}</td>
+            <td>{{ value }}</td>
+        </tr>
+        {%endfor%}
+    </table>
+    {% endblock %}
+
+    <p><a href="/addStudentOrganisation">Register again</a></p>
+
+</body>
+</html>
