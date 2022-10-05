@@ -1,4 +1,4 @@
-from datetime import date
+from datetime import datetime
 from urllib import request
 from flask import Flask, render_template, request
 import datetime
@@ -47,13 +47,13 @@ def checkNumber():
     return render_template('result.html', result=result)
 
 
-@app.get('/addStudentOrganisation')
+@app.get('/addStudentOrganization')
 def displayStudentForm():
     # Complete this function to display studentForm.html page
     return render_template('studentForm.html')
 
 
-@app.route('/addStudentOrganisation', methods=['POST'])
+@app.route('/addStudentOrganization', methods=['POST'])
 def displayRegistrationPage():
     # Get student name and organisation from form.
     studentName = request.form['name']
