@@ -13,7 +13,7 @@ studentOrganizationDetails = {}
 def index():
     # Complete this function to get current date and time assign this value to currentDate, display this data on index.html
     currentDate = datetime.datetime.now()
-    return render_template('index.html', currentDate=currentDate, cssfile="datetime.css")
+    return render_template('index.html', currentDate=currentDate)
 
 
 @app.get('/calculate')
@@ -47,13 +47,13 @@ def checkNumber():
     return render_template('result.html', result=result)
 
 
-@app.get('/addStudentOrganization')
+@app.get('/addStudentOrganisation')
 def displayStudentForm():
     # Complete this function to display studentForm.html page
     return render_template('studentForm.html')
 
 
-@app.route('/addStudentOrganization', methods=['POST'])
+@app.route('/addStudentOrganisation', methods=['POST'])
 def displayRegistrationPage():
     # Get student name and organisation from form.
     studentName = request.form['name']
